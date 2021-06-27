@@ -1,0 +1,26 @@
+﻿@model BookModel
+
+<h3>Kitap Ekleme Sayfası</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label">Kitap Id</label>
+                <input asp-for="Id" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Kitap Adı </label>
+                <input asp-for="Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label">Kitap Yazarı</label>
+                <input asp-for="Author" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Ekle" class="btn btn-primary float-right" />
+            </div>
+        </form>
+    </div>
+</div>

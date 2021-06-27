@@ -1,0 +1,30 @@
+﻿@model List<BookModel>
+
+    <h2>Index</h2>
+
+    <form asp-controller="Book" asp-action="Index" method="get">
+        <p>
+            Title: <input type="text" name="SearchString" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Yazarı</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var book in Model)
+                    {
+                        <tr>
+                            <td>@book.Id</td>
+                            <td>@book.Name</td>
+                            <td>@book.Author</td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
